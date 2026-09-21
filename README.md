@@ -294,8 +294,8 @@ Future improvements may include:
 
 ## 👤 Author
 
-**Francis**
+**Francis Parwez**
 
-Data Analyst | MSc Data Science
+Data Analyst
 
 This project is part of my Data Analytics portfolio and demonstrates practical skills in **Excel, data cleaning, exploratory analysis, data visualization, and business intelligence**.
