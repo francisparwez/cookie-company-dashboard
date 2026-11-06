@@ -2,7 +2,7 @@
 
 An interactive **Microsoft Excel dashboard** designed to analyze and visualize Cookie Company sales performance across products, countries, and time periods.
 
-The project demonstrates practical **data cleaning, data-quality validation, exploratory analysis, KPI development, PivotTables, interactive filtering, and dashboard design** using Excel.
+The project demonstrates practical **data cleaning, data-quality validation, exploratory analysis, KPI development, PivotTables, PivotCharts, and dashboard design** using Excel.
 
 ---
 
@@ -28,48 +28,41 @@ The project is being developed as an **Excel-based data analytics portfolio proj
 
 The primary objectives of this project are to:
 
-1.  Analyze overall sales performance.
-2.  Track Revenue, Cost, Profit, and Units Sold.
-3.  Compare performance across countries.
-4.  Analyze product-level sales performance.
-5.  Identify monthly sales and profitability trends.
-6.  Build interactive visualizations using Excel.
-7.  Apply data-quality checks before analysis.
-8.  Demonstrate professional Excel analytics and dashboard development practices.
+1. Analyze overall sales performance.
+2. Track Revenue, Cost, Profit, and Units Sold.
+3. Compare performance across countries.
+4. Analyze product-level sales performance.
+5. Identify monthly sales and profitability trends.
+6. Build interactive visualizations using Excel.
+7. Apply data-quality checks before analysis.
+8. Demonstrate professional Excel analytics and dashboard development practices.
 
 ---
 
 ## 🗂️ Dataset
 
-The Excel workbook contains three worksheets:
+The Excel workbook currently contains six worksheets:
 
----
-
-Worksheet Records Description
-
----
-
-`Data` 700 Primary sales dataset
-
-`New Data` 525 Additional dataset containing records overlapping with `Data`
-
-`Dashboard` Interactive dashboard currently under development
-
----
+| Worksheet                    |    Records / Content | Description                                                           |
+| ---------------------------- | -------------------: | --------------------------------------------------------------------- |
+| `Data`                       |          700 records | Primary sales dataset                                                 |
+| `New Data`                   |          525 records | Additional sales data; contains records overlapping with `Data`       |
+| `Dashboard`                  |            Dashboard | Main dashboard containing the branded header and first chart          |
+| `Sheet1`                     |           PivotTable | Supporting PivotTable worksheet                                       |
+| `Sheet1 (2)`                 |           PivotTable | Supporting PivotTable worksheet                                       |
+| `Profit By Country & Cookie` | PivotTable and chart | Profit summary by country and cookie product, with a supporting chart |
 
 ### Dataset Columns
 
-Column Description
-
----
-
-`Country` Country associated with the sales record
-`Product` Cookie product sold
-`Units Sold` Number of units sold
-`Revenue` Revenue generated from the sale
-`Cost` Cost associated with the sale
-`Profit` Profit generated from the sale
-`Date` Date of the sales record
+| Column       | Description                              |
+| ------------ | ---------------------------------------- |
+| `Country`    | Country associated with the sales record |
+| `Product`    | Cookie product sold                      |
+| `Units Sold` | Number of units sold                     |
+| `Revenue`    | Revenue generated from the sale          |
+| `Cost`       | Cost associated with the sale            |
+| `Profit`     | Profit generated from the sale           |
+| `Date`       | Date of the sales record                 |
 
 ---
 
@@ -79,25 +72,23 @@ Before building the dashboard, the dataset was reviewed for common data-quality 
 
 ### Confirmed Findings
 
-Check Result Status
-
----
-
-Missing values None identified ✅
-Internal duplicate rows None identified ✅
-Negative Units Sold None identified ✅
-Negative Revenue None identified ✅
-Negative Cost None identified ✅
-Negative Profit None identified ✅
-Zero Units Sold None identified ✅
-Zero Revenue None identified ✅
-Zero Cost None identified ✅
-Zero Profit None identified ✅
-Invalid country values None identified ✅
-Invalid product values None identified ✅
-Date formatting Valid ✅
-Profit calculation Consistent ✅
-Cross-sheet duplication 525 overlapping records ⚠️
+| Check                   | Result                  | Status |
+| ----------------------- | ----------------------- | ------ |
+| Missing values          | None identified         | ✅     |
+| Internal duplicate rows | None identified         | ✅     |
+| Negative Units Sold     | None identified         | ✅     |
+| Negative Revenue        | None identified         | ✅     |
+| Negative Cost           | None identified         | ✅     |
+| Negative Profit         | None identified         | ✅     |
+| Zero Units Sold         | None identified         | ✅     |
+| Zero Revenue            | None identified         | ✅     |
+| Zero Cost               | None identified         | ✅     |
+| Zero Profit             | None identified         | ✅     |
+| Invalid country values  | None identified         | ✅     |
+| Invalid product values  | None identified         | ✅     |
+| Date formatting         | Valid                   | ✅     |
+| Profit calculation      | Consistent              | ✅     |
+| Cross-sheet duplication | 525 overlapping records | ⚠️     |
 
 ### Important Data-Quality Finding
 
@@ -113,16 +104,13 @@ Therefore, simply appending both worksheets would result in duplicate records an
 
 The duplicate records were therefore treated as a **data-quality consideration rather than blindly combining both worksheets**.
 
-> **Important:** The repeated `Country + Product + Date` combinations
-> within the dataset were not automatically classified as duplicates
-> because multiple legitimate sales records may exist for the same
-> country, product, and date.
+> **Important:** The repeated `Country + Product + Date` combinations within the dataset were not automatically classified as duplicates because multiple legitimate sales records may exist for the same country, product, and date.
 
 ---
 
 ## 📈 Key Analytical Areas
 
-The planned dashboard analysis focuses on several areas of business performance.
+The dashboard is being developed around several areas of business performance.
 
 ### KPI Analysis
 
@@ -155,8 +143,7 @@ Performance can be compared across:
 
 ### Time Analysis
 
-The dashboard is intended to support analysis of sales performance over
-time, including:
+The dashboard is intended to support analysis of sales performance over time, including:
 
 - Monthly trends
 - Revenue trends
@@ -167,9 +154,7 @@ time, including:
 
 ## 🎨 Dashboard Preview
 
-The dashboard is currently in the **initial design stage**.
-
-The completed work so far includes the branded header, company logo, dashboard title, and main dashboard workspace.
+The dashboard is currently in development. The current version includes the branded header and the first chart, which compares profit across markets and cookie types.
 
 ![Current Dashboard Preview](screenshots/dashboard.png)
 
@@ -183,11 +168,13 @@ The current dashboard header includes:
 - A dark navy horizontal header
 - A dedicated workspace below the header for KPIs and visualizations
 
+### First Dashboard Visualization
+
+The first chart is titled **Profit By Market & Cookie Type**. It uses a stacked column layout to compare profit across the five markets, with each column segmented by cookie product.
+
 ---
 
 ## 🎨 Dashboard Development
-
-The `Dashboard` worksheet has now been created and the initial dashboard layout has been started.
 
 ### Completed
 
@@ -196,20 +183,22 @@ The `Dashboard` worksheet has now been created and the initial dashboard layout 
 - ✅ Added **Francis Cookie Company** branding/logo
 - ✅ Added the title **Performance Dashboard**
 - ✅ Established the main horizontal header area and dashboard workspace
+- ✅ Created supporting PivotTables for analysis
+- ✅ Created a profit summary by country and cookie product
+- ✅ Added the first dashboard chart: **Profit By Market & Cookie Type**
 
-The current dashboard is intentionally being developed in stages, with the header and overall visual foundation completed first.
+The first visualization compares the contribution of six cookie products to total profit in each of the five countries.
 
 ### Next Development Steps
 
-Planned dashboard components include:
-
-- ⬜ Interactive slicers
 - ⬜ KPI cards
-- ⬜ Revenue and profit analysis
+- ⬜ Interactive slicers
+- ⬜ Revenue and profit analysis beyond the current chart
 - ⬜ Monthly performance trends
-- ⬜ Country-level analysis
-- ⬜ Product-level analysis
+- ⬜ Additional country-level analysis
+- ⬜ Additional product-level analysis
 - ⬜ Final dashboard formatting and visual polish
+- ⬜ Final business insights
 
 ---
 
@@ -245,32 +234,36 @@ Profit Margin provides an additional measure of profitability beyond absolute pr
 
 ## 🛠️ Tools & Technologies
 
+### Currently Used
+
 - **Microsoft Excel**
+- Excel tables
 - PivotTables
-- PivotCharts
-- Excel Slicers
+- PivotCharts / Excel charts
 - Excel formulas
 - Data cleaning
 - Data-quality validation
-- Data visualization
 - Exploratory Data Analysis
 - Dashboard design
+
+### Planned / To Be Added
+
+- Excel Slicers
+- Interactive filtering
+- KPI cards
+- Additional dashboard visualizations
 
 ---
 
 ## 📁 Repository Structure
 
 ```text
-Cookie-Company-Interactive-Dashboard/
-│
-└── screenshots/
-│      └── dashboard.png
+cookie-company-dashboard/
+├── screenshots/
+│   └── dashboard.png
 ├── data__interactive-dashboard.xlsx
-└──README.md
+└── README.md
 ```
-
-> Repository structure may be expanded as additional documentation,
-> screenshots, or supporting files are added.
 
 ---
 
@@ -292,13 +285,13 @@ Validate Data Types & Business Rules
 Prepare Analytical Dataset
       │
       ▼
-Dashboard Layout & Design
+Create Supporting PivotTables
       │
       ▼
-KPIs / Calculations
+Build Dashboard Layout & Visualizations
       │
       ▼
-Interactive Visualizations
+Add KPIs and Interactive Controls
       │
       ▼
 Final Excel Dashboard
@@ -312,13 +305,13 @@ This project demonstrates that dashboard development should not begin with visua
 
 The analytical workflow first considers:
 
-1.  **What is the structure of the data?**
-2.  **Are there missing values?**
-3.  **Are there duplicate records?**
-4.  **Are numerical values valid?**
-5.  **Do business calculations reconcile?**
-6.  **Are multiple worksheets overlapping?**
-7.  **What is the appropriate analytical grain?**
+1. **What is the structure of the data?**
+2. **Are there missing values?**
+3. **Are there duplicate records?**
+4. **Are numerical values valid?**
+5. **Do business calculations reconcile?**
+6. **Are multiple worksheets overlapping?**
+7. **What is the appropriate analytical grain?**
 
 This helps prevent inaccurate KPIs and misleading visualizations.
 
@@ -333,12 +326,14 @@ This helps prevent inaccurate KPIs and misleading visualizations.
 - ✅ Dataset reviewed
 - ✅ Data-quality audit completed
 - ✅ Cross-sheet duplication identified
-- ✅ Excel workbook structured with `Data`, `New Data`, and `Dashboard` worksheets
+- ✅ Excel workbook structured with source data, supporting PivotTables, and a `Dashboard` worksheet
 - ✅ Dashboard worksheet created
 - ✅ Dashboard header and branding completed
+- ✅ First profit-by-country-and-product PivotTable created
+- ✅ First dashboard chart added
 - ⬜ KPI section
 - ⬜ Interactive controls
-- ⬜ Charts and visualizations
+- ⬜ Additional charts and visualizations
 - ⬜ Final dashboard formatting
 - ⬜ Final business insights
 
@@ -352,4 +347,4 @@ The dashboard will be updated progressively as additional analytical and visuali
 
 Data Analyst
 
-This project is part of my Data Analytics portfolio and demonstrates practical skills in **Excel, data cleaning, exploratory analysis, data visualization, dashboard design, and business intelligence**.
+This project is part of my Data Analytics portfolio and demonstrates practical skills in **Excel, data cleaning, exploratory analysis, PivotTables, data visualization, dashboard design, and business intelligence**.
